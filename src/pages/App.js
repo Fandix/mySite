@@ -1,3 +1,10 @@
+/*
+    name : App
+    Date : 2020/04/25
+    description : 主要頁面組件，
+    contain : header,content,footer
+*/
+
 import React from "react";
 import styles from "./App.module.scss";
 import {Link,Route,withRouter} from "react-router-dom";
@@ -15,6 +22,7 @@ class APP extends React.Component
         <div className={styles.App}>
 
         {/************* Header *************/}
+
             <header className={styles.header}>
                 <div className={styles.box}>
                     <Link to="/"><div className={styles.boxleft}>Vauxlab</div></Link>
@@ -28,13 +36,17 @@ class APP extends React.Component
                     </div>
                 </div>
             </header>
+
         {/************* section *************/}
+
             <section className={styles.content}>
                 <Route path = "/" exact  component = {HomePage}/>
                 <Route path = "/works" exact component = {WorkPage}/>
                 <Route path = "/works/:id" exact component = {WorkPageDetail}/>
             </section>
+
         {/************* footer *************/}
+        
             <footer className={styles.footer}>
                 <p>© <b>2020 Fandix Huang</b></p>
                 <p>Handmade with</p>
